@@ -54,6 +54,10 @@
     z-index: 3; /* Supaya selalu terlihat */
 }
 
+.smksab span{
+    color: #007bff;
+}
+
 
 /*
 navbar yang sebelumnya
@@ -143,4 +147,78 @@ li a:hover{
 
 .Nav-links a:hover {
     color: #007bff;
+}
+
+.satu{
+    display: flex;
+    gap: 90px;
+    justify-self: center;
+}
+
+.satu img{
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+} 
+
+/* 
+.wakil img{
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}  */
+
+
+.dua{
+    display: flex;
+    gap: 200px;
+    justify-self: center;
+}
+
+.dua img{
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+/* .bendahara2 img{
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.sekretaris1 img{
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.sekretaris2 img{
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+} */
+
+.tiga{
+    display: flex;
+    gap: 100px;
+    justify-self: center;
+}
+
+.tiga img{
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.empat{
+    display: flex;
+    gap: 100px;
+    justify-self: center;
+}
+
+.empat img{
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
 }
