@@ -92,17 +92,21 @@ li a:hover{
 
 /* navbar yang baru */
 .Navbar {
-     border-top: 3px solid black;/* warna border navbar */
-    position: relative; /* posisi*/
-    margin-top: 5px; /* memberikan jarak untuk */
-    position: fixed; /* agar navbar tetap diam saat di scroll*/
-    width: 100%; /* agar posisisi navbar memenuhi layar */
+                     /* warna border navbar */
+    border-width: 5px; /* ukuran border navbar */
+    position: fixed; /* agar navbar tetap diam saat di scroll */
+    top: 5px; /* memberikan jarak atas */
+    left: 5px; /* memberikan jarak kiri */
+    right: 5px; /* memberikan jarak kanan */
+    margin: 0; /* reset margin */
+    width: calc(100% - 10px); /* agar posisi navbar memenuhi layar dengan margin */
     display: flex; /* membuat display flex */
     justify-content: space-between; /* memberikan jarak antar Li */
     align-items: center; /* meletakan Li di tengah */
-    background-color:darkgray; /* backgroun navbar */
-    z-index: 10; /*agar navbar tetap di depan elemen lain */
-    height: 50px; /* tinggi navabr */
+    background-color: transparent; /* background navbar */
+    z-index: 10; /* agar navbar tetap di depan elemen lain */
+    height: 55px; /* tinggi navbar */
+    border-radius: 10px;
 }
 .Logo {
     display: flex; /* mengatur posisi logo agar flex*/
@@ -126,27 +130,27 @@ li a:hover{
     display: flex;
     gap: 20px;
     transform: translateX(-50%); /* mengatur posisi li di dalam navbar */
-    font-size: 18pt; 
+    font-size: 15pt; 
 }
 .Nav-links li {
     display: inline;
-    background-color: white;
+    background-color: rgb(93, 194, 253);
     border-radius: 20%;
     padding: 5px;
-    border-bottom: 2px solid darkblue;
+    border-bottom: 2px solid red;
     margin-bottom: -2px;
 
 }
 
 .Nav-links a {
     text-decoration: none;
-    color: black;
+    color:#007bff;
     font-weight: bold;
     
 }
 
 .Nav-links a:hover {
-    color: #007bff;
+    color: white;
 }
 
 .satu{
