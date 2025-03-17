@@ -16,6 +16,8 @@
     overflow: hidden; /* Menyembunyikan konten yang meluap */
 }
 
+
+
 /* Latar belakang berbentuk segitiga */
 .triangle {
     position: absolute; /* Posisi absolut dalam kontainer */
@@ -58,13 +60,16 @@
     z-index: 3; /* Supaya selalu terlihat */
 }
 
+
+
+
 .smksab span {
     color: #007bff; /* Warna teks */
 }
 
 /* Styling Navbar */
 .navbar {
-    position: fixed;
+    position: absolute; /* Posisi awal absolut */
     display: flex; /* Menggunakan layout flexbox */
     justify-content: space-between; /* Memberi jarak antar item */
     align-items: center; /* Menyelaraskan item secara vertikal */
@@ -73,6 +78,32 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan kotak */
     z-index: 1000; /* Supaya selalu terlihat */
     width: 100%; /* Lebar penuh */
+}
+
+.navbar.fixed {
+    position: fixed; /* Posisi fixed saat scroll */
+    top: 0; /* Tetap di atas */
+    left: 0; /* Tetap di kiri */
+    right: 0; /* Tetap di kanan */
+}
+
+.navbar {
+    position: absolute; /* Posisi awal absolut */
+    display: flex; /* Menggunakan layout flexbox */
+    justify-content: space-between; /* Memberi jarak antar item */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    padding: 20px 50px; /* Padding */
+    background: white; /* Warna latar belakang */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan kotak */
+    z-index: 1000; /* Supaya selalu terlihat */
+    width: 100%; /* Lebar penuh */
+}
+
+.navbar.fixed {
+    position: fixed; /* Posisi fixed saat scroll */
+    top: 0; /* Tetap di atas */
+    left: 0; /* Tetap di kiri */
+    right: 0; /* Tetap di kanan */
 }
 
 /* Styling Logo */
