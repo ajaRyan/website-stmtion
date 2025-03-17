@@ -8,6 +8,7 @@
 
 /* Kontainer untuk konten utama, mengambil tinggi dan lebar penuh viewport */
 .container {
+    display: flex; /* Menggunakan layout flexbox */
     position: relative; /* Posisi relatif terhadap posisinya yang normal */
     width: 100%; /* Lebar penuh */
     height: 100vh; /* Tinggi penuh viewport */
@@ -21,7 +22,7 @@
     width: 100%; /* Lebar penuh */
     height: 100%; /* Tinggi penuh */
     background-color: white; /* Warna latar belakang */
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%); /* Membuat bentuk segitiga */
+    clip-path: polygon(0 2%, 100% 2%, 100% 95%, 40% 95%); /* Membuat bentuk segitiga */
     top: 0; /* Posisi di atas */
     left: 0; /* Posisi di kiri */
 }
@@ -29,12 +30,12 @@
 /* Styling gambar maskot */
 .img-maskot {
     position: absolute; /* Posisi absolut dalam kontainer */
-    width: 280px; /* Bisa disesuaikan */
-    bottom: 0; /* Biarkan tetap di bawah */
-    right: 5%; /* Sesuaikan agar tetap dalam segitiga */
+    width: 25%; /* Bisa disesuaikan */
+    height: auto; /* Tinggi otomatis */
+    top: 55%; /* Posisi dari atas */
     z-index: 100; /* Pastikan di atas segitiga */
-    transform: scale(1.5); /* Skala gambar */
-    transform-origin: bottom right; /* Set asal untuk skala */
+   /* transform: scale(1.5);  Skala gambar */
+    transform: scale(2);
 }
 
 /* Styling konten */
@@ -52,7 +53,7 @@
     font-size: 56px; /* Ukuran font */
     position: absolute; /* Posisi absolut dalam kontainer */
     top: 15%; /* Posisi dari atas */
-    left: 5%; /* Posisi dari kiri */
+    left: 25%; /* Posisi dari kiri */
     color: black; /* Warna teks */
     z-index: 3; /* Supaya selalu terlihat */
 }
@@ -63,12 +64,15 @@
 
 /* Styling Navbar */
 .navbar {
+    position: fixed;
     display: flex; /* Menggunakan layout flexbox */
     justify-content: space-between; /* Memberi jarak antar item */
     align-items: center; /* Menyelaraskan item secara vertikal */
     padding: 20px 50px; /* Padding */
     background: white; /* Warna latar belakang */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan kotak */
+    z-index: 1000; /* Supaya selalu terlihat */
+    width: 100%; /* Lebar penuh */
 }
 
 /* Styling Logo */
