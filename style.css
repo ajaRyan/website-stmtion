@@ -1,224 +1,226 @@
+/* Reset margin dan padding default, set box-sizing ke border-box, dan set font default */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'tektur';
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+    box-sizing: border-box; /* Menyertakan padding dan border dalam total width dan height elemen */
+    font-family: 'tektur'; /* Mengatur font default */
 }
 
+/* Kontainer untuk konten utama, mengambil tinggi dan lebar penuh viewport */
 .container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: #2c98cf;
-    overflow: hidden;
+    display: flex; /* Menggunakan layout flexbox */
+    position: relative; /* Posisi relatif terhadap posisinya yang normal */
+    width: 100%; /* Lebar penuh */
+    height: 100vh; /* Tinggi penuh viewport */
+    background-color: #2c98cf; /* Warna latar belakang */
+    overflow: hidden; /* Menyembunyikan konten yang meluap */
 }
 
+
+
+/* Latar belakang berbentuk segitiga */
 .triangle {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
-    top: 0;
-    left: 0;
+    position: absolute; /* Posisi absolut dalam kontainer */
+    width: 100%; /* Lebar penuh */
+    height: 100%; /* Tinggi penuh */
+    background-color: white; /* Warna latar belakang */
+    clip-path: polygon(0 2%, 100% 2%, 100% 95%, 40% 95%); /* Membuat bentuk segitiga */
+    top: 0; /* Posisi di atas */
+    left: 0; /* Posisi di kiri */
 }
 
-
-/* untuk maskot */
+/* Styling gambar maskot */
 .img-maskot {
-    position: absolute;
-    width: 280px; /* Bisa disesuaikan */
-    bottom: 0; /* Biarkan tetap di bawah */
-    right: 5%; /* Sesuaikan agar tetap dalam segitiga */
+    position: absolute; /* Posisi absolut dalam kontainer */
+    width: 25%; /* Bisa disesuaikan */
+    height: auto; /* Tinggi otomatis */
+    top: 55%; /* Posisi dari atas */
     z-index: 100; /* Pastikan di atas segitiga */
-    transform: scale(1.5);
-    transform-origin:bottom right;
+   /* transform: scale(1.5);  Skala gambar */
+    transform: scale(2);
 }
 
-      
+/* Styling konten */
 .conten {
-    position: absolute;
-    width: 20px;
-    left: 20px;
-    color: black;
-    font-size: 2em;
-    font-weight: bold;
-    
+    position: absolute; /* Posisi absolut dalam kontainer */
+    width: 20px; /* Lebar */
+    left: 20px; /* Posisi dari kiri */
+    color: black; /* Warna teks */
+    font-size: 2em; /* Ukuran font */
+    font-weight: bold; /* Tebal font */
 }
+
+/* Styling SMK Sab */
 .smksab {
-    font-size: 56px;
-    position: absolute;
-    top: 15%;
-    left: 5%;
-    color: black;
+    font-size: 56px; /* Ukuran font */
+    position: absolute; /* Posisi absolut dalam kontainer */
+    top: 15%; /* Posisi dari atas */
+    left: 25%; /* Posisi dari kiri */
+    color: black; /* Warna teks */
     z-index: 3; /* Supaya selalu terlihat */
 }
 
-.smksab span{
-    color: #007bff;
+
+
+
+.smksab span {
+    color: #007bff; /* Warna teks */
 }
 
-
-/*
-navbar yang sebelumnya
-ul{
-
-    background-color: #2c98cf;
-    padding: 12px 15px;
-    list-style-type: none;
-    display: flex;
-    gap: 30px;
-    font-size: 24pt;
-    align-items: flex-end;
-    justify-content: flex-end;
+/* Styling Navbar */
+.navbar {
+    position: absolute; /* Posisi awal absolut */
+    display: flex; /* Menggunakan layout flexbox */
+    justify-content: space-between; /* Memberi jarak antar item */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    padding: 20px 50px; /* Padding */
+    background: white; /* Warna latar belakang */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan kotak */
+    z-index: 1000; /* Supaya selalu terlihat */
+    width: 100%; /* Lebar penuh */
 }
 
-li{
-    
-    display: flex;
-    justify-content: flex-end;
+.navbar.fixed {
+    position: fixed; /* Posisi fixed saat scroll */
+    top: 0; /* Tetap di atas */
+    left: 0; /* Tetap di kiri */
+    right: 0; /* Tetap di kanan */
 }
 
-li a{
-    display: flex;
-    text-decoration: none;
+.navbar {
+    position: absolute; /* Posisi awal absolut */
+    display: flex; /* Menggunakan layout flexbox */
+    justify-content: space-between; /* Memberi jarak antar item */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    padding: 20px 50px; /* Padding */
+    background: white; /* Warna latar belakang */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan kotak */
+    z-index: 1000; /* Supaya selalu terlihat */
+    width: 100%; /* Lebar penuh */
 }
 
-li a:hover{
-    cursor: pointer;
-    padding: 12px 15px; 
-    background-color: #328cb9;
-} */
-
-/* navbar yang baru */
-.Navbar {
-     border-top: 3px solid black;/* warna border navbar */
-    position: relative; /* posisi*/
-    margin-top: 5px; /* memberikan jarak untuk */
-    position: fixed; /* agar navbar tetap diam saat di scroll*/
-    width: 100%; /* agar posisisi navbar memenuhi layar */
-    display: flex; /* membuat display flex */
-    justify-content: space-between; /* memberikan jarak antar Li */
-    align-items: center; /* meletakan Li di tengah */
-    background-color:darkgray; /* backgroun navbar */
-    z-index: 10; /*agar navbar tetap di depan elemen lain */
-    height: 50px; /* tinggi navabr */
-}
-.Logo {
-    display: flex; /* mengatur posisi logo agar flex*/
-    align-items: center; /* meletakan logo di tengah */
-
+.navbar.fixed {
+    position: fixed; /* Posisi fixed saat scroll */
+    top: 0; /* Tetap di atas */
+    left: 0; /* Tetap di kiri */
+    right: 0; /* Tetap di kanan */
 }
 
-.Logo img {
-    position: absolute; /* agar posisi logo berada di navbar */
-    margin-top: 20px; /* memberikan jarak agar navbar tidak menyentuh atas layar */
-    width: 100px; /* memperbesar ukuran logo */
-    margin-right: 10px; 
-    height: auto; /* mengatur tunggi dari logo secara otomatis */
-    z-index: 100; /* agar logo berada di depan elemen lain*/
-
-}
-.Nav-links {
-    padding: 0; 
-    margin: 0;
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    transform: translateX(-50%); /* mengatur posisi li di dalam navbar */
-    font-size: 18pt; 
-}
-.Nav-links li {
-    display: inline;
-    background-color: white;
-    border-radius: 20%;
-    padding: 5px;
-    border-bottom: 2px solid darkblue;
-    margin-bottom: -2px;
-
+/* Styling Logo */
+.logo {
+    font-size: 24px; /* Ukuran font */
+    font-weight: bold; /* Tebal font */
+    color: black; /* Warna teks */
 }
 
-.Nav-links a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    
+.logo span {
+    color: #3498db; /* Warna biru */
 }
 
-.Nav-links a:hover {
-    color: #007bff;
+/* Styling menu link */
+.nav-links {
+    display: flex; /* Menggunakan layout flexbox */
+    gap: 30px; /* Jarak antar item */
+    list-style: none; /* Menghapus gaya list */
 }
 
-.satu{
-    display: flex;
-    gap: 90px;
-    justify-self: center;
+.nav-links li a {
+    text-decoration: none; /* Menghapus dekorasi teks */
+    font-size: 18px; /* Ukuran font */
+    font-weight: 500; /* Tebal font */
+    color: black; /* Warna teks */
+    transition: color 0.3s ease; /* Transisi warna yang halus */
 }
 
-.satu img{
-    border-radius: 100%;
-    height: 100px;
-    width: 100px;
-} 
-
-/* 
-.wakil img{
-    border-radius: 100%;
-    height: 100px;
-    width: 100px;
-}  */
-
-
-.dua{
-    display: flex;
-    gap: 200px;
-    justify-self: center;
+.nav-links li a:hover {
+    color: #3498db; /* Warna saat hover */
 }
 
-.dua img{
-    border-radius: 100%;
-    height: 100px;
-    width: 100px;
+/* Kontainer tombol menu */
+.menu-buttons {
+    display: flex; /* Menggunakan layout flexbox */
+    gap: 10px; /* Jarak antar tombol */
 }
 
-/* .bendahara2 img{
-    border-radius: 100%;
-    height: 100px;
-    width: 100px;
+/* Styling tombol */
+.btn {
+    text-decoration: none; /* Menghapus dekorasi teks */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Ukuran font */
+    font-weight: bold; /* Tebal font */
+    border-radius: 20px; /* Sudut melengkung */
+    transition: 0.3s; /* Transisi yang halus */
 }
 
-.sekretaris1 img{
-    border-radius: 100%;
-    height: 100px;
-    width: 100px;
+/* Styling tombol biru */
+.btn.blue {
+    background: #3498db; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan kotak */
 }
 
-.sekretaris2 img{
-    border-radius: 100%;
-    height: 100px;
-    width: 100px;
-} */
-
-.tiga{
-    display: flex;
-    gap: 100px;
-    justify-self: center;
+.btn.blue:hover {
+    background: #2980b9; /* Warna latar belakang saat hover */
 }
 
-.tiga img{
-    border-radius: 100%;
-    height: 100px;
-    width: 100px;
+/* Styling tombol hitam */
+.btn.black {
+    background: black; /* Warna latar belakang */
+    color: white; /* Warna teks */
 }
 
-.empat{
-    display: flex;
-    gap: 100px;
-    justify-self: center;
+.btn.black:hover {
+    background: #333; /* Warna latar belakang saat hover */
 }
 
-.empat img{
-    border-radius: 100%;
-    height: 100px;
-    width: 100px;
+/* Styling untuk bagian pertama dengan gambar */
+.satu {
+    display: flex; /* Menggunakan layout flexbox */
+    gap: 90px; /* Jarak antar item */
+    justify-self: center; /* Menyelaraskan item di tengah */
+}
+
+.satu img {
+    border-radius: 100%; /* Sudut melengkung penuh */
+    height: 100px; /* Tinggi */
+    width: 100px; /* Lebar */
+}
+
+/* Styling untuk bagian kedua dengan gambar */
+.dua {
+    display: flex; /* Menggunakan layout flexbox */
+    gap: 200px; /* Jarak antar item */
+    justify-self: center; /* Menyelaraskan item di tengah */
+}
+
+.dua img {
+    border-radius: 100%; /* Sudut melengkung penuh */
+    height: 100px; /* Tinggi */
+    width: 100px; /* Lebar */
+}
+
+/* Styling untuk bagian ketiga dengan gambar */
+.tiga {
+    display: flex; /* Menggunakan layout flexbox */
+    gap: 100px; /* Jarak antar item */
+    justify-self: center; /* Menyelaraskan item di tengah */
+}
+
+.tiga img {
+    border-radius: 100%; /* Sudut melengkung penuh */
+    height: 100px; /* Tinggi */
+    width: 100px; /* Lebar */
+}
+
+/* Styling untuk bagian keempat dengan gambar */
+.empat {
+    display: flex; /* Menggunakan layout flexbox */
+    gap: 100px; /* Jarak antar item */
+    justify-self: center; /* Menyelaraskan item di tengah */
+}
+
+.empat img {
+    border-radius: 100%; /* Sudut melengkung penuh */
+    height: 100px; /* Tinggi */
+    width: 100px; /* Lebar */
 }

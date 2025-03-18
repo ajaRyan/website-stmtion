@@ -12,24 +12,41 @@
 
 </head>
 <body>
-    <nav class="Navbar">
-        <div class="Logo">
-            <img src="/website-stmtion/assets/logo SMK animasi (1).png" alt="Logo SMKSAB">
-            <!-- <span>SMKSAB ANIMATION</span> -->
-        </div>
-        <ul class="Nav-links">
-            <li><a href="Beranda.html"> Beranda</a></li>
-            <li><a href="Selengkapnya.html">Selengkapnya</a></li>
-            <li><a href="Menu.html">Menu</a></li>
+    <nav class="navbar">
+        <div class="logo">SMKSAB <span>ANIMATION</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Selengkapnya</a></li>
+            <li><a href="#">Kontak</a></li>
         </ul>
+        <div class="menu-buttons">
+            <a href="#" class="btn blue">Menu</a>
+            <a href="#" class="btn black">Login</a>
+        </div>
     </nav>
-    <h1 class="smksab"><span>SMK</span>SAB <br>ANIMA<span>TION</span></h1>
+    
     <div class="container">
+        <h1 class="smksab"><span>SMK</span>SAB <br>ANIMA<span>TION</span></h1>
 
         
-
+        <img class="img-maskot" src="assets/Maskot.png" alt=""> 
         <div class="triangle">
-            <img class="img-maskot" src="assets/image.png" alt=""> 
+           
+         </div>
+        
+        <h1 class="content"></h1>
+
+        
+    </div>
+
+    
+    <div class="container">
+        <h1 class="smksab"><span>SMK</span>SAB <br>ANIMA<span>TION</span></h1>
+
+        
+        <img class="img-maskot" src="assets/Maskot.png" alt=""> 
+        <div class="triangle">
+           
          </div>
         
         <h1 class="content"></h1>
@@ -42,31 +59,48 @@
         <br>
         <div class="satu">  <!--tingkat 1-->
             <p><img src="pengurus stmtion/Ketua-umum.jpg" alt=""><br>Ketua-umum</p>
-            <p><img src="pengurus stmtion/Ketua-umum.jpg" alt=""><br>Wakil-ketua</p>
+            <p><img src="pengurus stmtion/Wakil-Ketua.jpg" alt=""><br>Wakil-ketua</p>
         </div>
         <br>
         <div class="dua"> <!--tingkat 2-->
             <p><img src="pengurus stmtion/Bendahara1.jpg" alt=""><br>Bendahara-1</p>
             <p><img src="pengurus stmtion/Ketua-umum.jpg" alt=""><br>Bendahara-2</p>
-            <p><img src="pengurus stmtion/Ketua-umum.jpg" alt=""><br>sekretaris-1</p>
-            <p><img src="pengurus stmtion/Ketua-umum.jpg" alt=""><br>sekretaris-2</p>
+            <p><img src="pengurus stmtion/Sekertaris-1.jpg" alt=""><br>sekretaris-1</p>
+            <p><img src="pengurus stmtion/Sekertaris-2.jpg" alt=""><br>sekretaris-2</p>
         </div>
         <br>
         <div class="tiga"> <!--tingka 3-->
-            <p><img src="pengurus stmtion/Ketua-umum.jpg" alt=""><br>Ketua Divisi 2D art</p>
+            <p><img src="pengurus stmtion/nobita.png" alt=""><br>Ketua Divisi 2D art</p>
             <p><img src="pengurus stmtion/Ketua-umum.jpg" alt=""><br>Ketua Divisi 3D art</p>
-            <p><img src="pengurus stmtion/Ketua-umum.jpg" alt=""><br>Ketua Divisi Script <br> Writter</p>
-            <p><img src="pengurus stmtion/Ketua-umum.jpg" alt=""><br>Ketua Divisi Voice <br> Actor & Sound Design</p>
-            <p><img src="pengurus stmtion/Ketua-umum.jpg" alt=""><br>Ketua Divisis Web & <br> Game Development</p>
+            <p><img src="pengurus stmtion/chinatsu.png" alt=""><br>Ketua Divisi Script <br> Writter</p>
+            <p><img src="pengurus stmtion/mr.popo.png" alt=""><br>Ketua Divisi Voice <br> Actor & Sound Design</p>
+            <p><img src="pengurus stmtion/Goku SSJG.png" alt=""><br>Ketua Divisis Web & <br> Game Development</p>
         </div>
         <br>
         <div class="empat"> <!--tingka 4-->
             <p><img src="pengurus stmtion/Ketua-umum.jpg" alt=""><br>Asisten Divisi 2D art</p>
             <p><img src="pengurus stmtion/Ketua-umum.jpg" alt=""><br>Asisten Divisi 3D art</p>
             <p><img src="pengurus stmtion/Ketua-umum.jpg" alt=""><br>Asisten Divisi Script <br> Writter</p>
-            <p><img src="pengurus stmtion/Ketua-umum.jpg" alt=""><br>Asisten Divisi Voice <br> Actor & Sound Design</p>
+            <p><img src="pengurus stmtion/Asisten Va & sound design.jpg" alt=""><br>Asisten Divisi Voice <br> Actor & Sound Design</p>
             <p><img src="pengurus stmtion/Ketua-umum.jpg" alt=""><br>Asisten Divisis Web & <br> Game Development</p>
         </div>
     </div>
-    
+    <script>
+        window.addEventListener('scroll', function() {
+            var navbar = document.querySelector('.navbar');
+            var pengurusSection = document.getElementById('pengurus-stmtion');
+            var pengurusTop = pengurusSection.offsetTop;
+            var pengurusBottom = pengurusTop + pengurusSection.offsetHeight;
+
+            if (window.scrollY >= pengurusTop && window.scrollY < pengurusBottom) {
+                navbar.classList.add('absolute');
+                navbar.classList.remove('fixed');
+            } else {
+                navbar.classList.add('fixed');
+                navbar.classList.remove('absolute');
+            }
+        });
+    </script>
+</body>
+  
 </html>
