@@ -230,3 +230,23 @@
     height: 100px; /* Tinggi */
     width: 100px; /* Lebar */
 }
+
+#pengurus-stmtion {
+    position: relative; /* Pastikan elemen induk memiliki posisi relatif */
+    z-index: 1; /* Pastikan elemen ini berada di atas pseudo-element */
+}
+
+#pengurus-stmtion::before {
+    content: ""; /* Konten kosong untuk pseudo-element */
+    position: absolute; /* Posisi absolut dalam elemen induk */
+    top: 0; /* Posisi di atas */
+    left: 0; /* Posisi di kiri */
+    width: 100%; /* Lebar penuh */
+    height: 100%; /* Tinggi penuh */
+    background-image: url('assets/logo SMK animasi (1).png'); /* Menetapkan gambar latar belakang */
+    background-size: contain; /* Mengatur ukuran gambar agar sesuai dengan kontainer */
+    background-position: center; /* Mengatur posisi gambar di tengah */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+    opacity: 0.5; /* Mengatur transparansi gambar */
+    z-index: -1; /* Pastikan pseudo-element berada di belakang elemen konten */
+}
