@@ -1,0 +1,176 @@
+/* Reset margin dan padding default, set box-sizing ke border-box, dan set font default */
+* {
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+    box-sizing: border-box; /* Menyertakan padding dan border dalam total width dan height elemen */
+    font-family: 'tektur'; /* Mengatur font default */
+}
+/* Kontainer untuk konten utama, mengambil tinggi dan lebar penuh viewport */
+.container {
+    display: flex; /* Menggunakan layout flexbox */
+    position: relative; /* Posisi relatif terhadap posisinya yang normal */
+    width: 100%; /* Lebar penuh */
+    height: 100vh; /* Tinggi penuh viewport */
+    background-color: #2c98cf; /* Warna latar belakang */
+    overflow: hidden; /* Menyembunyikan konten yang meluap */
+}
+
+.triangle {
+    position: absolute; /* Posisi absolut dalam kontainer */
+    width: 100%; /* Lebar penuh */
+    height: 100%; /* Tinggi penuh */
+    background-color: white; /* Warna latar belakang */
+    clip-path: polygon(0 2%, 100% 2%, 100% 95%, 40% 95%); /* Membuat bentuk segitiga */
+    top: 0; /* Posisi di atas */
+    left: 0; /* Posisi di kiri */
+}
+
+/* Styling gambar maskot */
+.img-maskot {
+    position: absolute; /* Posisi absolut dalam kontainer */
+    width: 20%; /* Bisa disesuaikan */
+    height: auto; /* Tinggi otomatis */
+    top: 55%; /* Posisi dari atas */
+    z-index: 100; /* Pastikan di atas segitiga */
+   /* transform: scale(1.5);  Skala gambar */
+   left: 20vh ;
+   transform: scale(2);
+   
+}
+
+/* Styling konten */
+.conten {
+    position: absolute; /* Posisi absolut dalam kontainer */
+    width: 20px; /* Lebar */
+    left: 20px; /* Posisi dari kiri */
+    color: black; /* Warna teks */
+    font-size: 2em; /* Ukuran font */
+    font-weight: bold; /* Tebal font */
+}
+
+/* Styling SMK Sab */
+.smksab {
+    font-size: 56px; /* Ukuran font */
+    position: absolute; /* Posisi absolut dalam kontainer */
+    top: 15%; /* Posisi dari atas */
+    left: 25%; /* Posisi dari kiri */
+    color: black; /* Warna teks */
+    z-index: 3; /* Supaya selalu terlihat */
+}
+
+
+
+
+.smksab span {
+    color: #007bff; /* Warna teks */
+}
+
+/* Styling Navbar */
+.navbar {
+    position: absolute; /* Posisi awal absolut */
+    display: flex; /* Menggunakan layout flexbox */
+    justify-content: space-between; /* Memberi jarak antar item */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    padding: 20px 50px; /* Padding */
+    background: white; /* Warna latar belakang */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan kotak */
+    z-index: 1000; /* Supaya selalu terlihat */
+    width: 100%; /* Lebar penuh */
+}
+
+.navbar.fixed {
+    position: fixed; /* Posisi fixed saat scroll */
+    top: 0; /* Tetap di atas */
+    left: 0; /* Tetap di kiri */
+    right: 0; /* Tetap di kanan */
+}
+
+.navbar {
+    position: absolute; /* Posisi awal absolut */
+    display: flex; /* Menggunakan layout flexbox */
+    justify-content: space-between; /* Memberi jarak antar item */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    padding: 20px 50px; /* Padding */
+    background: white; /* Warna latar belakang */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan kotak */
+    z-index: 1000; /* Supaya selalu terlihat */
+    width: 100%; /* Lebar penuh */
+}
+
+.navbar.fixed {
+    position: fixed; /* Posisi fixed saat scroll */
+    top: 0; /* Tetap di atas */
+    left: 0; /* Tetap di kiri */
+    right: 0; /* Tetap di kanan */
+}
+
+/* Styling Logo */
+.logo {
+    font-size: 24px; /* Ukuran font */
+    font-weight: bold; /* Tebal font */
+    color: black; /* Warna teks */
+}
+
+.logo span {
+    color: #3498db; /* Warna biru */
+}
+
+/* Styling menu link */
+.nav-links {
+    display: flex; /* Menggunakan layout flexbox */
+    gap: 30px; /* Jarak antar item */
+    list-style: none; /* Menghapus gaya list */
+}
+
+.nav-links li a {
+    text-decoration: none; /* Menghapus dekorasi teks */
+    font-size: 18px; /* Ukuran font */
+    font-weight: 500; /* Tebal font */
+    color: black; /* Warna teks */
+    transition: color 0.3s ease; /* Transisi warna yang halus */
+}
+
+.nav-links li a:hover {
+    color: #3498db; /* Warna saat hover */
+}
+
+/* Kontainer tombol menu */
+.menu-buttons {
+    display: flex; /* Menggunakan layout flexbox */
+    gap: 10px; /* Jarak antar tombol */
+}
+
+/* Styling tombol */
+.btn {
+    text-decoration: none; /* Menghapus dekorasi teks */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Ukuran font */
+    font-weight: bold; /* Tebal font */
+    border-radius: 20px; /* Sudut melengkung */
+    transition: 0.3s; /* Transisi yang halus */
+}
+
+/* Styling tombol biru */
+.btn.blue {
+    background: #3498db; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan kotak */
+}
+
+.btn.blue:hover {
+    background: #2980b9; /* Warna latar belakang saat hover */
+}
+
+/* Styling tombol hitam */
+.btn.black {
+    background: black; /* Warna latar belakang */
+    color: white; /* Warna teks */
+}
+
+.btn.black:hover {
+    cursor: not-allowed; /* Kursor not-allowed */
+}
+
+.btn.black:hover {
+    background: #333; /* Warna latar belakang saat hover */
+}
