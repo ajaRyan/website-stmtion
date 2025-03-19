@@ -32,12 +32,14 @@
 /* Styling gambar maskot */
 .img-maskot {
     position: absolute; /* Posisi absolut dalam kontainer */
-    width: 25%; /* Bisa disesuaikan */
+    width: 20%; /* Bisa disesuaikan */
     height: auto; /* Tinggi otomatis */
     top: 55%; /* Posisi dari atas */
     z-index: 100; /* Pastikan di atas segitiga */
    /* transform: scale(1.5);  Skala gambar */
-    transform: scale(2);
+   left: 20vh ;
+   transform: scale(2);
+   
 }
 
 /* Styling konten */
@@ -167,6 +169,10 @@
 .btn.black {
     background: black; /* Warna latar belakang */
     color: white; /* Warna teks */
+}
+
+.btn.black:hover {
+    cursor: not-allowed; /* Kursor not-allowed */
 }
 
 .btn.black:hover {
