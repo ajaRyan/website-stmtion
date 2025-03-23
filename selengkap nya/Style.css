@@ -5,6 +5,11 @@
     box-sizing: border-box; /* Menyertakan padding dan border dalam total width dan height elemen */
     font-family: 'tektur'; /* Mengatur font default */
 }
+
+a {
+    text-decoration: none; /* Menghapus dekorasi teks dan garis bawah href*/
+}
+
 /* Kontainer untuk konten utama, mengambil tinggi dan lebar penuh viewport */
 .container {
     display: flex; /* Menggunakan layout flexbox */

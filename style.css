@@ -6,8 +6,12 @@
     font-family: 'tektur'; /* Mengatur font default */
 }
 
+a {
+    text-decoration: none; /* Menghapus dekorasi teks dan garis bawah href*/
+}
+
 /* Kontainer untuk konten utama, mengambil tinggi dan lebar penuh viewport */
-.container {
+.Home {
     display: flex; /* Menggunakan layout flexbox */
     position: relative; /* Posisi relatif terhadap posisinya yang normal */
     width: 100%; /* Lebar penuh */
